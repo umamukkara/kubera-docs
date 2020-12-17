@@ -9,7 +9,10 @@ module.exports = contentSecurityPolicy({
     connectSrc: [
       "'self'",
       '*.algolia.net',
-      '*.algolianet.com'
+      '*.algolianet.com',
+      '*.google-analytics.com/*',
+      'sc.lfeeder.com/*',
+      'www.google-analytics.com/'
     ],
     fontSrc: [
       "'self'",
@@ -21,6 +24,8 @@ module.exports = contentSecurityPolicy({
       'github.githubassets.com',
       'github-images.s3.amazonaws.com',
       'octodex.github.com',
+      'www.googletagmanager.com',
+      'tr.lfeeder.com',
       'placehold.it'
     ],
     objectSrc: [
@@ -29,11 +34,14 @@ module.exports = contentSecurityPolicy({
     scriptSrc: [
       "'self'",
       'data:',
+      "www.googletagmanager.com",
+      "static.ads-twitter.com",
+      "sc.lfeeder.com/lftracker_v1_lYNOR8xK1oqaWQJZ.js",
       "'unsafe-eval'", // exception for Algolia instantsearch
       "'unsafe-inline'"
     ],
     frameSrc: [ // exceptions for GraphQL Explorer
-      'https://graphql-explorer.githubapp.com', // production env
+      'https://www.googletagmanager.com', // production env
       'http://localhost:3000' // development env
     ],
     styleSrc: [

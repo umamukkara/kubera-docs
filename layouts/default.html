@@ -1,27 +1,20 @@
 <!doctype html>
 <html lang="{{currentLanguage}}">
-  {% include head %}
-
-  <body class="d-lg-flex">
+{% include head %}
+<!-- <body class="d-lg-flex"  [ngClass]="{'body-style': page.relativePath == 'index.md'}"> -->
+<body class="d-lg-flex body-style">
     {% include sidebar %}
-
-    <main class="width-full text-white" style="
-        background-color: #1F173C;
-    background-image: url(/assets/images/landing.png);
-    background-blend-mode: color-dodge;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;    
-  ">
+    <main class="width-full">
       {% include header %}
       {% include deprecation-banner %}
       {% if page.relativePath == 'index.md' %}
-        {% include landing %}
+      {% include landing %}
       {% else %}
-        {% include article %}
+      {% include article %}
       {% endif %}
       {% include support %}
       {% include footer %}
     </main>
   </body>
+
 </html>

@@ -18,12 +18,26 @@ Form and inputs using .ais- prefix gets added by Algolia InstantSearch.js */
 }
 
 .ais-SearchBox-input {
+  caret-color: rgba(125, 55, 158, 1);
+  box-shadow: none !important;
+  background-color: transparent;
   width: 100%;
   padding: 10px $spacer-2 10px $spacer-5;
   font-size: 16px;
   @extend .form-control;
-  border:none;
-  background-color: rgba(35, 26, 66, 0.65);
+  border-color:rgba(169, 61, 219, 0.388) !important;
+  border: 1.33px solid;
+  // background-color: rgba(13, 12, 18, 0.9);
+  :focus{
+    box-shadow: none !important;
+    border: none !important;
+    border-color: transparent;
+  }
+  :active{
+    box-shadow: none;
+    border: none !important;
+    border-color: transparent ;
+  }
 }
 
 .ais-SearchBox-reset {

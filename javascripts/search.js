@@ -43,7 +43,7 @@ const resultTemplate = (item) => {
 
   // Construct the template to return
   const html = `
-    <div class="search-result border-top border-gray-light py-3 px-2">
+    <div class="search-result border-gray-light py-3 px-2">
       <a href="#" class="no-underline">
         <div class="search-result-breadcrumbs d-block text-gray-dark opacity-60 text-small pb-1">${item.modifiedBreadcrumbs}</div>
         <div class="search-result-title d-block h4-mktg text-gray-dark">${title}</div>
@@ -249,6 +249,7 @@ function toggleSearchDisplay (isReset) {
 
 function openSearch () {
   document.querySelector('#search-input-container input').classList.add('js-open')
+  document.querySelector('#search-input-container input').classList.add('p-0')
   document.querySelector('#search-results-container').classList.add('js-open')
   document.querySelector('.search-overlay-desktop').classList.add('js-open')
 }
